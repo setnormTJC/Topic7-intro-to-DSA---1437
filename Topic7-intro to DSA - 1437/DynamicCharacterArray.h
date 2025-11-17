@@ -4,7 +4,7 @@
 class DynamicCharacterArrayADT
 {
 public: 
-	virtual void push(const char characterToPush) = 0;
+	virtual void pushBack(const char characterToPush) = 0;
 
 	/*Base class NEEDS a virtual destructor  - lest we have a memory leak in certain (polymorphism) situations!*/
 	virtual ~DynamicCharacterArrayADT() = default; 
@@ -22,7 +22,7 @@ public:
 	RawDynamicCharacterArray() = default; 
 
 	/*pushes at the BACK*/
-	void push(const char characterToPush);
+	void pushBack(const char characterToPush);
 
 	/*If using raw (AKA: "naked") pointers, you should define a custom destructor function
 	* This relates to something called the "Rule of 5" in C++
@@ -41,5 +41,7 @@ private:
 
 public: 
 	SmartDynamicCharacterArray() = default; 
-	void push(const char characterToPush);
+	void pushBack(const char characterToAddToEnd);
+
+	void print(); 
 };

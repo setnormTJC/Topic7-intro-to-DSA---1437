@@ -6,9 +6,21 @@
 #include<vector> //we are going to "reinvent this wheel" with our OWN implementation
 
 #include"Demos.h"
+#include"DynamicCharacterArray.h" //This is basically a "string" class 
 
 int main()
 {
+	//giveReminderOfStdVector(); 
+
+	RawDynamicCharacterArray rawDynamicCharacterArray;
+
+	rawDynamicCharacterArray.pushBack('a');
+	rawDynamicCharacterArray.pushBack('b');
+	rawDynamicCharacterArray.pushBack('c');
+	rawDynamicCharacterArray.pushBack('d');
+	rawDynamicCharacterArray.pushBack('e');
+
+	rawDynamicCharacterArray.pushBack('f'); //how is THIS going to work? 
 
 
 }

@@ -2,7 +2,7 @@
 #include <iostream>
 
 /***************The "raw" implementation section*******************************/
-void RawDynamicCharacterArray::push(const char characterToPush)
+void RawDynamicCharacterArray::pushBack(const char characterToAddToEnd)
 {
 	if (current_size == max_capacity)
 	{
@@ -19,7 +19,7 @@ void RawDynamicCharacterArray::push(const char characterToPush)
 		}
 
 		//delete (deallocate) the old "chunk" of memory (lest a memory leak)
-		delete [] rawPtrToDynamicCharList; //fixed this after lecture!
+		delete [] rawPtrToDynamicCharList; 
 
 		//assign member variable (which "lives" beyond this function) the same address as the new chunk: 
 		rawPtrToDynamicCharList = ptrToLargerChunkOfMemory; 
@@ -29,7 +29,7 @@ void RawDynamicCharacterArray::push(const char characterToPush)
 	}
 
 	//finally, put the new value in place and update the size member variable: 
-	rawPtrToDynamicCharList[current_size] = characterToPush;
+	rawPtrToDynamicCharList[current_size] = characterToAddToEnd;
 	current_size++; 
 	
 }
@@ -44,7 +44,7 @@ RawDynamicCharacterArray::~RawDynamicCharacterArray()
 //This pragma region thing is an optional (and NON-PORTABLE) "goody" used for "code folding"
 #pragma region Smart 
 /*******************************************The "smart" implementation section:*************************/
-void SmartDynamicCharacterArray::push(const char characterToPush)
+void SmartDynamicCharacterArray::pushBack(const char characterToPush)
 {
 	if (current_size == max_capacity)
 	{

@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Demos.cpp" />
     <ClCompile Include="DynamicCharacterArray.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
