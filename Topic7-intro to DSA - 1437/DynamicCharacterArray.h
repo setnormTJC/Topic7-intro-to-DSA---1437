@@ -11,6 +11,7 @@ public:
 };
 
 /*"Raw" means "naked/raw" pointers are used in the implementation*/
+ 
 class RawDynamicCharacterArray : public DynamicCharacterArrayADT
 {
 private:

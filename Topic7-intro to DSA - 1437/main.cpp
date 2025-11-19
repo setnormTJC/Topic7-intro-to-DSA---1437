@@ -10,9 +10,15 @@
 
 int main()
 {
+
+
+	int* aChunkOfMemoryForInts = new int[5]; 
+
+	std::cout << aChunkOfMemoryForInts[-1] << "\n"; //C-style arrays and naked/raw pointers (as opposed to "smart" pointers) are UNSAFE
+
 	//giveReminderOfStdVector(); 
 
-	RawDynamicCharacterArray rawDynamicCharacterArray;
+	RawDynamicCharacterArray rawDynamicCharacterArray; //iniital capacity in the CONSTRUCTOR is 5 spots for characters
 
 	rawDynamicCharacterArray.pushBack('a');
 	rawDynamicCharacterArray.pushBack('b');
@@ -21,6 +27,11 @@ int main()
 	rawDynamicCharacterArray.pushBack('e');
 
 	rawDynamicCharacterArray.pushBack('f'); //how is THIS going to work? 
+
+
+	int indexToInsertCharacterAt = 1; 
+	char characterToInsert = 'z';
+	//rawDynamicCharacterArray.insert(indexToInsertCharacterAt, characterToInsert);
 
 
 }
